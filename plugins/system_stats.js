@@ -20,13 +20,9 @@ const Lang = Language.getString('system_stats');
 
 if (Config.WORKTYPE == 'private') {
 
-    Asena.addCommand({pattern: 'on', fromMe: true, desc: Lang.ALIVE_DESC}, (async (message, match) => {
+    Asena.addCommand({pattern: 'alive', fromMe: true, desc: Lang.ALIVE_DESC}, (async (message, match) => {
 
         if (Config.ALIVEMSG == 'default') {
-            await message.client.sendMessage(message.jid,'✅ *Wang Ja-Rim Sedang aktif*\n\n🆚 *Version:* '+Config.VERSION+'\n🛠️ *Dikelola oleh:* https://t.me/gmardiana\n🔗 *Github:* https://github.com/Imszy17\n\n📌 Ketik *!help* untuk melihat daftar perintah' , MessageType.text);
-        }
-        else {
-            await message.client.sendMessage(message.jid,Config.ALIVEMSG + '\n*Powered by Wang Ja-rim (AI)*', MessageType.text);
             await message.client.sendMessage(message.jid,'```Tanrı Türk\'ü Korusun. 🐺 Asena Hizmetinde!```\n\n*Version:* ```'+Config.VERSION+'```\n*Branch:* ```'+Config.BRANCH+'```\n*Telegram Group:* https://t.me/AsenaSupport\n*Telegram Channel:* https://t.me/asenaremaster\n*Plugin Channel:* ' + Config.CHANNEL , MessageType.text);
         }
         else {
@@ -55,13 +51,9 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
 
-    Asena.addCommand({pattern: 'on', fromMe: false, desc: Lang.ALIVE_DESC}, (async (message, match) => {
+    Asena.addCommand({pattern: 'alive', fromMe: false, desc: Lang.ALIVE_DESC}, (async (message, match) => {
 
         if (Config.ALIVEMSG == 'default') {
-            await message.client.sendMessage(message.jid,'✅ *Wang Ja-Rim Sedang aktif*\n\n🆚 *Version:* '+Config.VERSION+'\n🛠️ *Dikelola oleh:* https://t.me/gmardiana\n🔗 *Github:* https://github.com/Imszy17\n\n📌 Ketik *!help* untuk melihat daftar perintah' , MessageType.text);
-        }
-        else {
-            await message.client.sendMessage(message.jid,Config.ALIVEMSG + '\n*Powered by Wang Ja-rim (AI)*', MessageType.text);
             await message.client.sendMessage(message.jid,'```Tanrı Türk\'ü Korusun. 🐺 Asena Hizmetinde!```\n\n*Version:* ```'+Config.VERSION+'```\n*Branch:* ```'+Config.BRANCH+'```\n*Telegram Group:* https://t.me/AsenaSupport\n*Telegram Channel:* https://t.me/asenaremaster\n*Plugin Channel:* ' + Config.CHANNEL, MessageType.text);
         }
         else {
@@ -88,10 +80,10 @@ else if (Config.WORKTYPE == 'public') {
         );
     }));
 
-    Asena.addCommand({pattern: 'alive', fromMe: true, desc: Lang.ALIVE_DESC, dontAddCommandList: true}, (async (message, match) => {
+    Asena.addCommand({pattern: 'on', fromMe: true, desc: Lang.ALIVE_DESC, dontAddCommandList: true}, (async (message, match) => {
 
         if (Config.ALIVEMSG == 'default') {
-            await message.client.sendMessage(message.jid,'```Tanrı Türk\'ü Korusun. 🐺 Asena Hizmetinde!```\n\n*Version:* ```'+Config.VERSION+'```\n*Branch:* ```'+Config.BRANCH+'```\n*Telegram Group:* https://t.me/AsenaSupport\n*Telegram Channel:* https://t.me/asenaremaster\n*Plugin Channel:* ' + Config.CHANNEL, MessageType.text);
+            await message.client.sendMessage(message.jid,'✅ *Wang Ja-Rim Sedang aktif*\n\n🆚 *Version:* '+Config.VERSION+'\n🛠️ *Dikelola oleh:* https://t.me/gmardiana\n🔗 *Github:* https://github.com/Imszy17\n\n📌 Ketik *!help* untuk melihat daftar perintah' , MessageType.text);
         }
         else {
             const pow = '*Powered by WhatsAsena*'
