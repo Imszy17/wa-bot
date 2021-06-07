@@ -83,7 +83,7 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
 
-    Asena.addCommand({pattern: 'asena ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+    Asena.addCommand({pattern: 'help ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
         var CMD_HELP = '';
         if (match[1] === '') {
@@ -112,7 +112,7 @@ else if (Config.WORKTYPE == 'public') {
             );
         
             await message.client.sendMessage(
-                message.jid,'●▬▬▬ *WhatsAsena Public* ▬▬▬●\n\n' + CMD_HELP, MessageType.text
+                message.jid,'●▬▬▬ *Wang-Jarim perintah* ▬▬▬●\n\n' + CMD_HELP, MessageType.text
             );    
         } else {
 
